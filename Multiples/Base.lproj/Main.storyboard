@@ -30,8 +30,21 @@
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sKZ-3P-MIo"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your multiples number:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8q-Nd-4Na" userLabel="multiples_input">
-                                <rect key="frame" x="195" y="354" width="210" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="multiple:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B8q-Nd-4Na" userLabel="multiples_input">
+                                <rect key="frame" x="196" y="327" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H80-yA-hk5"/>
+                                    <constraint firstAttribute="width" constant="210" id="W7u-QP-Tvr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="limit:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uq2-v9-ZOz" userLabel="multiples_input2">
+                                <rect key="frame" x="195" y="359" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7Ld-rA-Jfh"/>
+                                    <constraint firstAttribute="width" constant="210" id="jdY-cL-0k5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -42,9 +55,15 @@
                                     <constraint firstAttribute="width" constant="415" id="epg-EQ-ZhQ"/>
                                 </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5 + 5 = 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxJ-x4-pTJ" userLabel="text_display">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxJ-x4-pTJ" userLabel="text_display">
                                 <rect key="frame" x="161" y="202" width="278" height="105"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-EL-9i4" userLabel="text2_display">
+                                <rect key="frame" x="156" y="202" width="278" height="105"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -63,10 +82,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hd3-zW-ryw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="41W-xS-KYH"/>
+                            <constraint firstItem="ThN-EL-9i4" firstAttribute="top" secondItem="ef5-vw-gS0" secondAttribute="bottom" constant="30" id="4cL-jT-c4y"/>
+                            <constraint firstItem="uq2-v9-ZOz" firstAttribute="top" secondItem="B8q-Nd-4Na" secondAttribute="bottom" constant="4" id="75y-ba-NuF"/>
                             <constraint firstItem="WxJ-x4-pTJ" firstAttribute="top" secondItem="ef5-vw-gS0" secondAttribute="bottom" constant="63" id="7wh-lF-kjX"/>
                             <constraint firstItem="laL-z0-xzu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DaX-cU-YgR"/>
                             <constraint firstItem="WxJ-x4-pTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3E-yr-Pfi"/>
+                            <constraint firstItem="uq2-v9-ZOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ROw-La-bXi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NdY-r7-GSN" secondAttribute="bottom" constant="75" id="RbN-Pe-9vN"/>
+                            <constraint firstItem="ThN-EL-9i4" firstAttribute="top" secondItem="ef5-vw-gS0" secondAttribute="bottom" constant="30" id="UBO-V0-cER"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="laL-z0-xzu" secondAttribute="bottom" constant="20" id="ahX-H1-TP9"/>
                             <constraint firstItem="ef5-vw-gS0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cYW-Fz-X1I"/>
                             <constraint firstItem="Hd3-zW-ryw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gya-mV-Yb5"/>
@@ -76,10 +99,12 @@
                             <constraint firstItem="ef5-vw-gS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ond-UF-ZZw"/>
                             <constraint firstItem="B8q-Nd-4Na" firstAttribute="top" secondItem="WxJ-x4-pTJ" secondAttribute="bottom" constant="47" id="oz0-VS-cWu"/>
                             <constraint firstItem="NdY-r7-GSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skj-Vy-TAr"/>
-                            <constraint firstItem="laL-z0-xzu" firstAttribute="top" secondItem="B8q-Nd-4Na" secondAttribute="bottom" constant="16" id="vbQ-ze-rI0"/>
+                            <constraint firstItem="laL-z0-xzu" firstAttribute="top" secondItem="B8q-Nd-4Na" secondAttribute="bottom" constant="100" id="vbQ-ze-rI0"/>
+                            <constraint firstItem="ThN-EL-9i4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yz3-kp-Rgu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4cL-jT-c4y"/>
                                 <exclude reference="oz0-VS-cWu"/>
                             </mask>
                         </variation>
@@ -87,9 +112,11 @@
                     <connections>
                         <outlet property="addDisplay" destination="NdY-r7-GSN" id="ofq-eo-chF"/>
                         <outlet property="multiplesInput" destination="B8q-Nd-4Na" id="wEM-9O-7JI"/>
+                        <outlet property="multiplesInput2" destination="uq2-v9-ZOz" id="GmY-KP-QVE"/>
                         <outlet property="multiplesTitle" destination="ef5-vw-gS0" id="fxT-qs-a7y"/>
                         <outlet property="playDisplay" destination="laL-z0-xzu" id="zfB-3h-4jq"/>
                         <outlet property="textLabel" destination="WxJ-x4-pTJ" id="gSE-SS-Shd"/>
+                        <outlet property="textLabel2" destination="ThN-EL-9i4" id="xdo-7N-K7l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
