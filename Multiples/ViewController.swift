@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var multiplesTitle: UIImageView!
     @IBOutlet weak var addDisplay: UIButton!
     @IBOutlet weak var textLabel2: UILabel!
+    @IBOutlet weak var limitReached: UILabel!
     
     
 
@@ -41,12 +42,15 @@ class ViewController: UIViewController {
             multiplesTitle.hidden = true
             multiplesInput.hidden = true
             multiplesInput2.hidden = true
+            limitReached.hidden = true
             
             addDisplay.hidden = false
             textLabel.hidden = false
             textLabel2.hidden = false
         
             currentTaps = 0
+            
+            textDisplay()
         }
         
     }
@@ -55,7 +59,10 @@ class ViewController: UIViewController {
         tapCount()
         if currentTaps >= maxTaps {
             gameRestart()
+        } else if currentTaps == (maxTaps - 1) {
+            limitReached.hidden = false
         }
+        
         textDisplay()
     }
 
@@ -69,6 +76,8 @@ class ViewController: UIViewController {
         multiplesTitle.hidden = false
         multiplesInput.hidden = false
         multiplesInput2.hidden = false
+        
+        limitReached.hidden = true
         
         addDisplay.hidden = true
         textLabel.hidden = true

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -61,12 +62,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-EL-9i4" userLabel="text2_display">
-                                <rect key="frame" x="156" y="202" width="278" height="105"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NdY-r7-GSN">
                                 <rect key="frame" x="195" y="424" width="211" height="101"/>
                                 <constraints>
@@ -78,13 +73,27 @@
                                     <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3xR-rv-uAT"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThN-EL-9i4" userLabel="text2_display">
+                                <rect key="frame" x="161" y="304" width="278" height="105"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Limit Reached!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebo-rW-GZx" userLabel="limitReached">
+                                <rect key="frame" x="161" y="411" width="278" height="105"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ebo-rW-GZx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="36" id="1HX-mA-lgy"/>
                             <constraint firstItem="Hd3-zW-ryw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="41W-xS-KYH"/>
                             <constraint firstItem="ThN-EL-9i4" firstAttribute="top" secondItem="ef5-vw-gS0" secondAttribute="bottom" constant="30" id="4cL-jT-c4y"/>
                             <constraint firstItem="uq2-v9-ZOz" firstAttribute="top" secondItem="B8q-Nd-4Na" secondAttribute="bottom" constant="4" id="75y-ba-NuF"/>
                             <constraint firstItem="WxJ-x4-pTJ" firstAttribute="top" secondItem="ef5-vw-gS0" secondAttribute="bottom" constant="63" id="7wh-lF-kjX"/>
+                            <constraint firstItem="ebo-rW-GZx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AF8-h8-FMS"/>
                             <constraint firstItem="laL-z0-xzu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DaX-cU-YgR"/>
                             <constraint firstItem="WxJ-x4-pTJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3E-yr-Pfi"/>
                             <constraint firstItem="uq2-v9-ZOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ROw-La-bXi"/>
@@ -94,6 +103,7 @@
                             <constraint firstItem="ef5-vw-gS0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cYW-Fz-X1I"/>
                             <constraint firstItem="Hd3-zW-ryw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gya-mV-Yb5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hd3-zW-ryw" secondAttribute="bottom" id="hLa-T6-2Hg"/>
+                            <constraint firstItem="ebo-rW-GZx" firstAttribute="top" secondItem="ThN-EL-9i4" secondAttribute="bottom" constant="6" id="lTp-ux-Q2q"/>
                             <constraint firstItem="B8q-Nd-4Na" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mSJ-r5-teC"/>
                             <constraint firstAttribute="trailing" secondItem="Hd3-zW-ryw" secondAttribute="trailing" id="nSy-mt-6TT"/>
                             <constraint firstItem="ef5-vw-gS0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ond-UF-ZZw"/>
@@ -101,16 +111,20 @@
                             <constraint firstItem="NdY-r7-GSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skj-Vy-TAr"/>
                             <constraint firstItem="laL-z0-xzu" firstAttribute="top" secondItem="B8q-Nd-4Na" secondAttribute="bottom" constant="100" id="vbQ-ze-rI0"/>
                             <constraint firstItem="ThN-EL-9i4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yz3-kp-Rgu"/>
+                            <constraint firstItem="ebo-rW-GZx" firstAttribute="top" secondItem="ThN-EL-9i4" secondAttribute="bottom" constant="40" id="zB7-Ze-FVH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="4cL-jT-c4y"/>
                                 <exclude reference="oz0-VS-cWu"/>
+                                <exclude reference="lTp-ux-Q2q"/>
+                                <exclude reference="zB7-Ze-FVH"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="addDisplay" destination="NdY-r7-GSN" id="ofq-eo-chF"/>
+                        <outlet property="limitReached" destination="ebo-rW-GZx" id="OGS-W6-fKu"/>
                         <outlet property="multiplesInput" destination="B8q-Nd-4Na" id="wEM-9O-7JI"/>
                         <outlet property="multiplesInput2" destination="uq2-v9-ZOz" id="GmY-KP-QVE"/>
                         <outlet property="multiplesTitle" destination="ef5-vw-gS0" id="fxT-qs-a7y"/>
